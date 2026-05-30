@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามนักเรียน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container"> 
+        <!-- หน้าแรก -->
+        <div id="page1">
+            <h1>แบบสอบถามนักเรียน</h1>
+            <p>โปรดกรอกข้อมูลและตอบคำถามด้านล่าง</p>
+            <label>เลขประจำตัวนักเรียน<span style="color: red;">*</span></label>
+            <input type="text" id="studentId" placeholder="กรอกเลขประจำตัวนักเรียน" required>
+            <button type="button" onclick="nextPage()">เริ่มทำแบบสอบถาม</button>
+        </div>
+        
+        <!-- หน้าที่ 2 -->
+        <div id="page2" style="display:none;">
+            <h1>แบบสอบถามนักเรียน</h1>
+            <p>5=พอใจมากที่สุด, 1=พอใจน้อยที่สุด</p>
+            
+            <form id="surveyForm">
+                <!-- คำถามที่ 1 -->
+                <div class="question">
+                    <h3>1.คุณพอใจกับสภาพแวดล้อมของห้องเรียนหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q1" value="5"> 5</label>
+                    <label><input type="radio" name="q1" value="4"> 4</label>
+                    <label><input type="radio" name="q1" value="3"> 3</label>
+                    <label><input type="radio" name="q1" value="2"> 2</label>
+                    <label><input type="radio" name="q1" value="1"> 1</label>
+
+                </div>
+                <!-- คำถามที่ 2 -->
+                <div class="question">
+                    <h3>2.คุณพอใจกับการเรียนการสอนของครูหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q2" value="5"> 5</label>
+                    <label><input type="radio" name="q2" value="4"> 4</label>
+                    <label><input type="radio" name="q2" value="3"> 3</label>
+                    <label><input type="radio" name="q2" value="2"> 2</label>
+                    <label><input type="radio" name="q2" value="1"> 1</label>
+                
+                </div>
+                <!-- คำถามที่ 3 -->
+                <div class="question">
+                    <h3>3.คุณพอใจกับการเข้าแถวหน้าเสาธงหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q3" value="5"> 5</label>
+                    <label><input type="radio" name="q3" value="4"> 4</label>
+                    <label><input type="radio" name="q3" value="3"> 3</label>
+                    <label><input type="radio" name="q3" value="2"> 2</label>
+                    <label><input type="radio" name="q3" value="1"> 1</label>
+
+                </div>
+                <!-- คำถามที่ 4 -->
+                <div class="question">
+                    <h3>4.คุณพอใจกับการใช้งานโรงอาหารหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q4" value="5"> 5</label>
+                    <label><input type="radio" name="q4" value="4"> 4</label>
+                    <label><input type="radio" name="q4" value="3"> 3</label>
+                    <label><input type="radio" name="q4" value="2"> 2</label>
+                    <label><input type="radio" name="q4" value="1"> 1</label>
+                
+                </div>
+                <!-- คำถามที่ 5 -->
+                <div class="question">
+                    <h3>5.คุณพอใจกับการใช้งานสุขาหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q5" value="5"> 5</label>
+                    <label><input type="radio" name="q5" value="4"> 4</label>
+                    <label><input type="radio" name="q5" value="3"> 3</label>
+                    <label><input type="radio" name="q5" value="2"> 2</label>
+                    <label><input type="radio" name="q5" value="1"> 1</label>
+                
+                </div>
+                <button type="submit">ส่งแบบสอบถาม</button>  
+            </form>
+
+        </div>
+    </div>
+    
+<script src="script.js"></script>    
+</body>
