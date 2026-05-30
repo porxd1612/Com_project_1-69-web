@@ -78,9 +78,81 @@
                     <label><input type="radio" name="q5" value="1"> 1</label>
                 
                 </div>
-                <button type="submit">ส่งแบบสอบถาม</button>  
+                <button type="button" onclick="nextPage()">หน้าถัดไป</button>  
             </form>
+        
+        </div>
+        
+        <!-- หน้าที่ 3 -->
+        <div id="page3" style="display:none;">
+    
+            <form id="surveyForm">
+                <!-- คำถามที่ 6 -->
+                <div class="question">
+                    <h3>6.คุณพอใจกับสภาพแวดล้อมของห้องเรียนหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q6" value="5"> 5</label>
+                    <label><input type="radio" name="q6" value="4"> 4</label>
+                    <label><input type="radio" name="q6" value="3"> 3</label>
+                    <label><input type="radio" name="q6" value="2"> 2</label>
+                    <label><input type="radio" name="q6" value="1"> 1</label>
+    
+                </div>
+                <!-- คำถามที่ 7 -->
+                <div class="question">
+                    <h3>7.คุณพอใจกับการเรียนการสอนของครูหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q7" value="5"> 5</label>
+                    <label><input type="radio" name="q7" value="4"> 4</label>
+                    <label><input type="radio" name="q7" value="3"> 3</label>
+                    <label><input type="radio" name="q7" value="2"> 2</label>
+                    <label><input type="radio" name="q7" value="1"> 1</label>
+                
+                </div>
+                <!-- คำถามที่ 8 -->
+                <div class="question">
+                    <h3>8.คุณพอใจกับการเข้าแถวหน้าเสาธงหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q8" value="5"> 5</label>
+                    <label><input type="radio" name="q8" value="4"> 4</label>
+                    <label><input type="radio" name="q8" value="3"> 3</label>
+                    <label><input type="radio" name="q8" value="2"> 2</label>
+                    <label><input type="radio" name="q8" value="1"> 1</label>
+    
+                </div>
+                <!-- คำถามที่ 9 -->
+                <div class="question">
+                    <h3>9.คุณพอใจกับการใช้งานห้องสมุดหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q9" value="5"> 5</label>
+                    <label><input type="radio" name="q9" value="4"> 4</label>
+                    <label><input type="radio" name="q9" value="3"> 3</label>
+                    <label><input type="radio" name="q9" value="2"> 2</label>
+                    <label><input type="radio" name="q9" value="1"> 1</label>
+                
+                </div>
+                <!-- คำถามที่ 10 -->
+                <div class="question">
+                    <h3>10.คุณพอใจกับการใช้งานสุขาหรือไม่</h3>
+                    
+                    <label><input type="radio" name="q10" value="5"> 5</label>
+                    <label><input type="radio" name="q10" value="4"> 4</label>
+                    <label><input type="radio" name="q10" value="3"> 3</label>
+                    <label><input type="radio" name="q10" value="2"> 2</label>
+                    <label><input type="radio" name="q10" value="1"> 1</label>
+                
+                </div>
+                <button type="button" onclick="prevPage()">หน้าก่อนหน้า</button>  
+                 
+                <button type="submit">ส่งแบบสอบถาม</button> 
+            </form>
+    </div>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>ขอบคุณที่ทำแบบสอบถาม</h2>
+            <p>ข้อมูลของคุณได้รับการบันทึกแล้ว</p>
+            <button onclick="closePopup()">ปิด</button>
         </div>
     </div>
     
