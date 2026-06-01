@@ -1,32 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบสอบถามนักเรียน</title>
+    <title>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container"> 
+    <div class="container">
         <!-- หน้าแรก -->
         <div id="page1">
-            <h1>แบบสอบถามนักเรียน</h1>
-            <p>โปรดกรอกข้อมูลและตอบคำถามด้านล่าง</p>
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>👇🏻โปรดกรอกข้อมูลและตอบคำถามด้านล่าง👇🏻</p>
             <label>เลขประจำตัวนักเรียน<span style="color: red;">*</span></label>
             <input type="text" id="studentId" placeholder="กรอกเลขประจำตัวนักเรียน" required>
-            <button type="button" onclick="nextPage()">เริ่มทำแบบสอบถาม</button>
-        </div>
+                
+            <button type="button" onclick="nextPage(2)">เริ่มทำแบบสอบถาม</button>
         
+        </div>
+
         <!-- หน้าที่ 2 -->
         <div id="page2" style="display:none;">
-            <h1>แบบสอบถามนักเรียน</h1>
-            <p>5=พอใจมากที่สุด, 1=พอใจน้อยที่สุด</p>
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>😍5=พึงพอใจมากที่สุด, 1=พึงพอใจน้อยที่สุด😢</p>
             
-            <form id="surveyForm">
+            <h2> ด้านที่ 1: ด้านรสชาติและคุณภาพอาหาร🍕</h2>
+            
+            <form id="surveyFormPage2">
                 <!-- คำถามที่ 1 -->
                 <div class="question">
-                    <h3>1.คุณพอใจกับสภาพแวดล้อมของห้องเรียนหรือไม่</h3>
-                    
+                    <h3>1.ท่านมีความพึงพอใจต่อรสชาติของอาหารที่จำหน่ายในโรงอาหาร</h3>
+
                     <label><input type="radio" name="q1" value="5"> 5</label>
                     <label><input type="radio" name="q1" value="4"> 4</label>
                     <label><input type="radio" name="q1" value="3"> 3</label>
@@ -36,19 +43,19 @@
                 </div>
                 <!-- คำถามที่ 2 -->
                 <div class="question">
-                    <h3>2.คุณพอใจกับการเรียนการสอนของครูหรือไม่</h3>
-                    
+                    <h3>2.ท่านมีความพึงพอใจต่อคุณภาพของวัตถุดิบที่ใช้ประกอบอาหาร</h3>
+
                     <label><input type="radio" name="q2" value="5"> 5</label>
                     <label><input type="radio" name="q2" value="4"> 4</label>
                     <label><input type="radio" name="q2" value="3"> 3</label>
                     <label><input type="radio" name="q2" value="2"> 2</label>
                     <label><input type="radio" name="q2" value="1"> 1</label>
-                
+
                 </div>
                 <!-- คำถามที่ 3 -->
                 <div class="question">
-                    <h3>3.คุณพอใจกับการเข้าแถวหน้าเสาธงหรือไม่</h3>
-                    
+                    <h3>3.ท่านมีความพึงพอใจต่อความสดใหม่ของอาหารที่จำหน่าย</h3>
+
                     <label><input type="radio" name="q3" value="5"> 5</label>
                     <label><input type="radio" name="q3" value="4"> 4</label>
                     <label><input type="radio" name="q3" value="3"> 3</label>
@@ -58,103 +65,350 @@
                 </div>
                 <!-- คำถามที่ 4 -->
                 <div class="question">
-                    <h3>4.คุณพอใจกับการใช้งานโรงอาหารหรือไม่</h3>
-                    
+                    <h3>4.ท่านมีความพึงพอใจต่อความหลากหลายของเมนูอาหาร</h3>
+
                     <label><input type="radio" name="q4" value="5"> 5</label>
                     <label><input type="radio" name="q4" value="4"> 4</label>
                     <label><input type="radio" name="q4" value="3"> 3</label>
                     <label><input type="radio" name="q4" value="2"> 2</label>
                     <label><input type="radio" name="q4" value="1"> 1</label>
-                
+
                 </div>
                 <!-- คำถามที่ 5 -->
                 <div class="question">
-                    <h3>5.คุณพอใจกับการใช้งานสุขาหรือไม่</h3>
-                    
+                    <h3>5.ท่านมีความพึงพอใจต่อปริมาณอาหารที่ได้รับเมื่อเทียบกับมาตรฐานทั่วไป</h3>
+
                     <label><input type="radio" name="q5" value="5"> 5</label>
                     <label><input type="radio" name="q5" value="4"> 4</label>
                     <label><input type="radio" name="q5" value="3"> 3</label>
                     <label><input type="radio" name="q5" value="2"> 2</label>
                     <label><input type="radio" name="q5" value="1"> 1</label>
-                
+
                 </div>
-                <button type="button" onclick="nextPage()">หน้าถัดไป</button>  
+                
+                <div class="button-group">
+                    <button type="button" onclick="prevPage(1)">←หน้าก่อนหน้า</button>
+                    <button type="button" onclick="nextPage(3)">หน้าถัดไป→</button>
+                </div>
             </form>
-        
+
         </div>
-        
+
         <!-- หน้าที่ 3 -->
         <div id="page3" style="display:none;">
-    
-            <form id="surveyForm">
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>😍5=พึงพอใจมากที่สุด, 1=พึงพอใจน้อยที่สุด😢</p>
+            
+            <h2>ด้านที่ 2: ด้านราคาและความคุ้มค่า💰</h2>
+            
+            <form id="surveyFormPage3">
                 <!-- คำถามที่ 6 -->
                 <div class="question">
-                    <h3>6.คุณพอใจกับสภาพแวดล้อมของห้องเรียนหรือไม่</h3>
-                    
+                    <h3>6.ท่านมีความพึงพอใจต่อราคาอาหารที่จำหน่ายในโรงอาหาร</h3>
+
                     <label><input type="radio" name="q6" value="5"> 5</label>
                     <label><input type="radio" name="q6" value="4"> 4</label>
                     <label><input type="radio" name="q6" value="3"> 3</label>
                     <label><input type="radio" name="q6" value="2"> 2</label>
                     <label><input type="radio" name="q6" value="1"> 1</label>
-    
+
                 </div>
                 <!-- คำถามที่ 7 -->
                 <div class="question">
-                    <h3>7.คุณพอใจกับการเรียนการสอนของครูหรือไม่</h3>
-                    
+                    <h3>7.ท่านมีความพึงพอใจต่อความคุ้มค่าของอาหารเมื่อเทียบกับราคา</h3>
+
                     <label><input type="radio" name="q7" value="5"> 5</label>
                     <label><input type="radio" name="q7" value="4"> 4</label>
                     <label><input type="radio" name="q7" value="3"> 3</label>
                     <label><input type="radio" name="q7" value="2"> 2</label>
                     <label><input type="radio" name="q7" value="1"> 1</label>
-                
+
                 </div>
                 <!-- คำถามที่ 8 -->
                 <div class="question">
-                    <h3>8.คุณพอใจกับการเข้าแถวหน้าเสาธงหรือไม่</h3>
-                    
+                    <h3>8.ท่านมีความพึงพอใจต่อราคาของเครื่องดื่มที่จำหน่าย</h3>
+
                     <label><input type="radio" name="q8" value="5"> 5</label>
                     <label><input type="radio" name="q8" value="4"> 4</label>
                     <label><input type="radio" name="q8" value="3"> 3</label>
                     <label><input type="radio" name="q8" value="2"> 2</label>
                     <label><input type="radio" name="q8" value="1"> 1</label>
-    
+
                 </div>
                 <!-- คำถามที่ 9 -->
                 <div class="question">
-                    <h3>9.คุณพอใจกับการใช้งานห้องสมุดหรือไม่</h3>
-                    
+                    <h3>9.ท่านมีความพึงพอใจต่อความเหมาะสมของราคาอาหารเมื่อเทียบกับคุณภาพ</h3>
+
                     <label><input type="radio" name="q9" value="5"> 5</label>
                     <label><input type="radio" name="q9" value="4"> 4</label>
                     <label><input type="radio" name="q9" value="3"> 3</label>
                     <label><input type="radio" name="q9" value="2"> 2</label>
                     <label><input type="radio" name="q9" value="1"> 1</label>
-                
+
                 </div>
                 <!-- คำถามที่ 10 -->
                 <div class="question">
-                    <h3>10.คุณพอใจกับการใช้งานสุขาหรือไม่</h3>
-                    
+                    <h3>10.ท่านมีความพึงพอใจต่อระดับราคาสินค้าโดยรวมในโรงอาหาร</h3>
+
                     <label><input type="radio" name="q10" value="5"> 5</label>
                     <label><input type="radio" name="q10" value="4"> 4</label>
                     <label><input type="radio" name="q10" value="3"> 3</label>
                     <label><input type="radio" name="q10" value="2"> 2</label>
                     <label><input type="radio" name="q10" value="1"> 1</label>
+
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="prevPage(2)">←หน้าก่อนหน้า</button>
+                    <button type="button" onclick="nextPage(4)">หน้าถัดไป→</button>
+                </div>
+            </form>
+        </div>
+
+        <!--หน้าที่ 4-->
+        <div id="page4" style="display:none;">
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>😍5=พึงพอใจมากที่สุด, 1=พึงพอใจน้อยที่สุด😢</p>
+            
+            <h2>ด้านที่ 3: ด้านความสะอาดและสุขอนามัย🧼</h2>
+            
+
+            <form id="surveyFormPage4">
+                <!-- คำถามที่ 11 -->
+                <div class="question">
+                    <h3>11.ท่านมีความพึงพอใจต่อความสะอาดของภาชนะใส่อาหารและเครื่องดื่ม</h3>
+
+                    <label><input type="radio" name="q11" value="5"> 5</label>
+                    <label><input type="radio" name="q11" value="4"> 4</label>
+                    <label><input type="radio" name="q11" value="3"> 3</label>
+                    <label><input type="radio" name="q11" value="2"> 2</label>
+                    <label><input type="radio" name="q11" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 12 -->
+                <div class="question">
+                    <h3>12.ท่านมีความพึงพอใจต่อความสะอาดของร้านจำหน่ายอาหาร</h3>
+    
+                    <label><input type="radio" name="q12" value="5"> 5</label>
+                    <label><input type="radio" name="q12" value="4"> 4</label>
+                    <label><input type="radio" name="q12" value="3"> 3</label>
+                    <label><input type="radio" name="q12" value="2"> 2</label>
+                    <label><input type="radio" name="q12" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 13 -->
+                <div class="question">
+                    <h3>13.ท่านมีความพึงพอใจต่อการแต่งกายและสุขลักษณะของผู้จำหน่ายอาหาร</h3>
+
+                    <label><input type="radio" name="q13" value="5"> 5</label>
+                    <label><input type="radio" name="q13" value="4"> 4</label>
+                    <label><input type="radio" name="q13" value="3"> 3</label>
+                    <label><input type="radio" name="q13" value="2"> 2</label>
+                    <label><input type="radio" name="q13" value="1"> 1</label>
+
+                </div>
+                
+                <!-- คำถามที่ 14 -->
+                <div class="question">
+                    <h3>14.ท่านมีความพึงพอใจต่อความสะอาดของพื้นที่รับประทานอาหาร</h3>
+
+                    <label><input type="radio" name="q14" value="5"> 5</label>
+                    <label><input type="radio" name="q14" value="4"> 4</label>
+                    <label><input type="radio" name="q14" value="3"> 3</label>
+                    <label><input type="radio" name="q14" value="2"> 2</label>
+                    <label><input type="radio" name="q14" value="1"> 1</label>
+                </div>
+                
+                <!-- คำถามที่ 15 -->
+                <div class="question">
+                    <h3>15.ท่านมีความพึงพอใจต่อความสะอาดโดยรวมของโรงอาหาร</h3>
+
+                    <label><input type="radio" name="q15" value="5"> 5</label>
+                    <label><input type="radio" name="q15" value="4"> 4</label>
+                    <label><input type="radio" name="q15" value="3"> 3</label>
+                    <label><input type="radio" name="q15" value="2"> 2</label>
+                    <label><input type="radio" name="q15" value="1"> 1</label>
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="prevPage(3)">←หน้าก่อนหน้า</button>
+                    <button type="button" onclick="nextPage(5)">หน้าถัดไป→</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!--หน้าที่ 5-->
+        <div id="page5" style="display:none;">
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>😍5=พึงพอใจมากที่สุด, 1=พึงพอใจน้อยที่สุด😢</p>
+            
+            <h2>ด้านที่ 4: ด้านสถานที่และสิ่งอำนวยความสะดวก🏫</h2>
+            
+
+            <form id="surveyFormPage5">
+                <!-- คำถามที่ 16 -->
+                <div class="question">
+                    <h3>16.ท่านมีความพึงพอใจต่อจำนวนโต๊ะและที่นั่งภายในโรงอาหาร</h3>
+
+                    <label><input type="radio" name="q16" value="5"> 5</label>
+                    <label><input type="radio" name="q16" value="4"> 4</label>
+                    <label><input type="radio" name="q16" value="3"> 3</label>
+                    <label><input type="radio" name="q16" value="2"> 2</label>
+                    <label><input type="radio" name="q16" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 17 -->
+                <div class="question">
+                    <h3>17.ท่านมีความพึงพอใจต่อการจัดพื้นที่ภายในโรงอาหาร</h3>
+    
+                    <label><input type="radio" name="q17" value="5"> 5</label>
+                    <label><input type="radio" name="q17" value="4"> 4</label>
+                    <label><input type="radio" name="q17" value="3"> 3</label>
+                    <label><input type="radio" name="q17" value="2"> 2</label>
+                    <label><input type="radio" name="q17" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 18 -->
+                <div class="question">
+                    <h3>18.ท่านมีความพึงพอใจต่อการระบายอากาศภายในโรงอาหาร</h3>
+                    
+                    <label><input type="radio" name="q18" value="5"> 5</label>
+                    <label><input type="radio" name="q18" value="4"> 4</label>
+                    <label><input type="radio" name="q18" value="3"> 3</label>
+                    <label><input type="radio" name="q18" value="2"> 2</label>
+                    <label><input type="radio" name="q18" value="1"> 1</label>
                 
                 </div>
-                <button type="button" onclick="prevPage()">หน้าก่อนหน้า</button>  
-                 
-                <button type="submit">ส่งแบบสอบถาม</button> 
-            </form>
-    </div>
 
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h2>ขอบคุณที่ทำแบบสอบถาม</h2>
-            <p>ข้อมูลของคุณได้รับการบันทึกแล้ว</p>
-            <button onclick="closePopup()">ปิด</button>
+                <!-- คำถามที่ 19 -->
+                <div class="question">
+                    <h3>19.ท่านมีความพึงพอใจต่อความเพียงพอของจุดล้างมือภายในโรงอาหาร</h3>
+                    
+                    <label><input type="radio" name="q19" value="5"> 5</label>
+                    <label><input type="radio" name="q19" value="4"> 4</label>
+                    <label><input type="radio" name="q19" value="3"> 3</label>
+                    <label><input type="radio" name="q19" value="2"> 2</label>
+                    <label><input type="radio" name="q19" value="1"> 1</label>
+
+                </div>
+
+                <!-- คำถามที่ 20 -->
+                <div class="question">
+                    <h3>20.ท่านมีความพึงพอใจต่อสภาพแวดล้อมโดยรวมของโรงอาหาร</h3>
+                    
+                    <label><input type="radio" name="q20" value="5"> 5</label>
+                    <label><input type="radio" name="q20" value="4"> 4</label>
+                    <label><input type="radio" name="q20" value="3"> 3</label>
+                    <label><input type="radio" name="q20" value="2"> 2</label>
+                    <label><input type="radio" name="q20" value="1"> 1</label>
+
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" onclick="prevPage(4)">←หน้าก่อนหน้า</button>
+                    <button type="button" onclick="nextPage(6)">หน้าถัดไป→</button>
+                </div>
+            
+            </form>
+        </div>
+
+        <!--หน้าที่ 6-->
+        <div id="page6" style="display:none;">
+            <h1>แบบสอบถามความพึงพอใจในการใช้งานโรงอาหาร</h1>
+            <p>😍5=พึงพอใจมากที่สุด, 1=พึงพอใจน้อยที่สุด😢</p>
+            
+            <h2>ด้านที่ 5: ด้านการบริการของร้านค้า🛎</h2>
+        
+            <form id="surveyFormPage6">
+                <!-- คำถามที่ 21 -->
+                <div class="question">
+                    <h3>21.ท่านมีความพึงพอใจต่อความสุภาพของผู้ให้บริการ</h3>
+
+                    <label><input type="radio" name="q21" value="5"> 5</label>
+                    <label><input type="radio" name="q21" value="4"> 4</label>
+                    <label><input type="radio" name="q21" value="3"> 3</label>
+                    <label><input type="radio" name="q21" value="2"> 2</label>
+                    <label><input type="radio" name="q21" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 22 -->
+                <div class="question">
+                    <h3>22.ท่านมีความพึงพอใจต่อความรวดเร็วในการให้บริการ</h3>
+    
+                    <label><input type="radio" name="q22" value="5"> 5</label>
+                    <label><input type="radio" name="q22" value="4"> 4</label>
+                    <label><input type="radio" name="q22" value="3"> 3</label>
+                    <label><input type="radio" name="q22" value="2"> 2</label>
+                    <label><input type="radio" name="q22" value="1"> 1</label>
+                    
+                </div>
+                
+                <!-- คำถามที่ 23 -->
+                <div class="question">
+                    <h3>23.ท่านมีความพึงพอใจต่อความถูกต้องในการให้บริการและการคิดเงิน</h3>
+                    
+                    <label><input type="radio" name="q23" value="5"> 5</label>
+                    <label><input type="radio" name="q23" value="4"> 4</label>
+                    <label><input type="radio" name="q23" value="3"> 3</label>
+                    <label><input type="radio" name="q23" value="2"> 2</label>
+                    <label><input type="radio" name="q23" value="1"> 1</label>
+                
+                </div>
+
+                <!-- คำถามที่ 24 -->
+                <div class="question">
+                    <h3>24.ท่านมีความพึงพอใจต่อความเอาใจใส่ของผู้ให้บริการ</h3>
+                    
+                    <label><input type="radio" name="q24" value="5"> 5</label>
+                    <label><input type="radio" name="q24" value="4"> 4</label>
+                    <label><input type="radio" name="q24" value="3"> 3</label>
+                    <label><input type="radio" name="q24" value="2"> 2</label>
+                    <label><input type="radio" name="q24" value="1"> 1</label>
+
+                </div>
+
+                <!-- คำถามที่ 25 -->
+                <div class="question">
+                    <h3>25.ท่านมีความพึงพอใจต่อการให้บริการโดยรวมของร้านค้าในโรงอาหาร</h3>
+                    
+                    <label><input type="radio" name="q25" value="5"> 5</label>
+                    <label><input type="radio" name="q25" value="4"> 4</label>
+                    <label><input type="radio" name="q25" value="3"> 3</label>
+                    <label><input type="radio" name="q25" value="2"> 2</label>
+                    <label><input type="radio" name="q25" value="1"> 1</label>
+
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" onclick="prevPage(5)">←หน้าก่อนหน้า</button>
+                    <button type="submit">✅ส่งคำตอบ</button>
+                </div>
+                
+            </form>
+        </div>
+        
+        
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2 id="popuptitle">ขอบคุณที่ทำแบบสอบถาม</h2>
+                <p id="popupmessage">ข้อมูลของคุณได้รับการบันทึกแล้ว</p>
+                <button onclick="closePopup()">ปิด</button>
+            </div>
+        </div>
+        
+        
+        <div id="thankyouPage" style="display:none;">
+            
+                <h1>🎉ขอบคุณสำหรับการตอบแบบสอบถาม!</h1>
+                <p>ข้อมูลของคุณได้รับการบันทึกแล้ว</p>
+                <p>ขอบคุณที่สละเวลาในการตอบแบบสอบถามkub!</p>
+            
         </div>
     </div>
-    
-<script src="script.js"></script>    
+<script src="script.js"></script>
 </body>
+</html>
