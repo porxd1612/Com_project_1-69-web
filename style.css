@@ -50,6 +50,13 @@ input[type="text"]{
     box-sizing: border-box;
 }
 
+#studentId:focus{
+    outline: none; 
+    border-color: #4a86e8; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(74, 134, 232, 0.4);
+}
+
 .question{
     margin-bottom: 20px;
     padding: 20px; 
@@ -71,7 +78,7 @@ label{
 /* ปุ่มกดใหญ่ๆสีน้ำเงิน */
 button{width: 100%; 
     padding: 14px; 
-    
+    box-shadow: 0 0 20px rgba(44, 47, 248, 0.39);
     background-color: #4285f4; 
     color: white; 
     
@@ -136,4 +143,11 @@ button{width: 100%;
     background-color: white;
     cursor: pointer;
     box-sizing: border-box;
+}
+
+#studentLevel:focus{
+    outline: none;
+    border-color: #4a86e8;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(74, 134, 232, 0.4);
 }
